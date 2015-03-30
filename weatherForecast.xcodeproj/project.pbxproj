@@ -14,6 +14,9 @@
 		081C9FE01AC8569500E3BB80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081C9FDF1AC8569500E3BB80 /* Images.xcassets */; };
 		081C9FE31AC8569500E3BB80 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081C9FE11AC8569500E3BB80 /* LaunchScreen.xib */; };
 		081C9FEF1AC8569500E3BB80 /* weatherForecastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 081C9FEE1AC8569500E3BB80 /* weatherForecastTests.m */; };
+		081C9FFA1AC85AD600E3BB80 /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 081C9FF91AC85AD600E3BB80 /* sky.jpg */; };
+		083B416D1AC96271000B4BB0 /* TableViewCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083B416C1AC96271000B4BB0 /* TableViewCustomCell.xib */; };
+		083B41701AC9638B000B4BB0 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 083B416F1AC9638B000B4BB0 /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		081C9FE81AC8569500E3BB80 /* weatherForecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherForecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		081C9FED1AC8569500E3BB80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		081C9FEE1AC8569500E3BB80 /* weatherForecastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = weatherForecastTests.m; sourceTree = "<group>"; };
+		081C9FF91AC85AD600E3BB80 /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
+		083B416C1AC96271000B4BB0 /* TableViewCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCustomCell.xib; sourceTree = "<group>"; };
+		083B416E1AC9638B000B4BB0 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		083B416F1AC9638B000B4BB0 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		083B41711AC96555000B4BB0 /* TableViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewConst.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +89,9 @@
 		081C9FD11AC8569500E3BB80 /* weatherForecast */ = {
 			isa = PBXGroup;
 			children = (
-				081C9FD61AC8569500E3BB80 /* AppDelegate.h */,
-				081C9FD71AC8569500E3BB80 /* AppDelegate.m */,
-				081C9FD91AC8569500E3BB80 /* ViewController.h */,
-				081C9FDA1AC8569500E3BB80 /* ViewController.m */,
-				081C9FDC1AC8569500E3BB80 /* Main.storyboard */,
-				081C9FDF1AC8569500E3BB80 /* Images.xcassets */,
+				083B416A1AC961DC000B4BB0 /* Const */,
+				083B41691AC961CF000B4BB0 /* View */,
+				083B41681AC961AC000B4BB0 /* TableViewCell */,
 				081C9FE11AC8569500E3BB80 /* LaunchScreen.xib */,
 				081C9FD21AC8569500E3BB80 /* Supporting Files */,
 			);
@@ -96,6 +101,7 @@
 		081C9FD21AC8569500E3BB80 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				081C9FF81AC85AD600E3BB80 /* img */,
 				081C9FD31AC8569500E3BB80 /* Info.plist */,
 				081C9FD41AC8569500E3BB80 /* main.m */,
 			);
@@ -117,6 +123,45 @@
 				081C9FED1AC8569500E3BB80 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		081C9FF81AC85AD600E3BB80 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				081C9FF91AC85AD600E3BB80 /* sky.jpg */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		083B41681AC961AC000B4BB0 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				081C9FD61AC8569500E3BB80 /* AppDelegate.h */,
+				081C9FD71AC8569500E3BB80 /* AppDelegate.m */,
+				081C9FDC1AC8569500E3BB80 /* Main.storyboard */,
+				081C9FDF1AC8569500E3BB80 /* Images.xcassets */,
+				083B416C1AC96271000B4BB0 /* TableViewCustomCell.xib */,
+				083B416E1AC9638B000B4BB0 /* CustomTableViewCell.h */,
+				083B416F1AC9638B000B4BB0 /* CustomTableViewCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		083B41691AC961CF000B4BB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				081C9FD91AC8569500E3BB80 /* ViewController.h */,
+				081C9FDA1AC8569500E3BB80 /* ViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		083B416A1AC961DC000B4BB0 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				083B41711AC96555000B4BB0 /* TableViewConst.h */,
+			);
+			name = Const;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				081C9FDE1AC8569500E3BB80 /* Main.storyboard in Resources */,
+				083B416D1AC96271000B4BB0 /* TableViewCustomCell.xib in Resources */,
+				081C9FFA1AC85AD600E3BB80 /* sky.jpg in Resources */,
 				081C9FE31AC8569500E3BB80 /* LaunchScreen.xib in Resources */,
 				081C9FE01AC8569500E3BB80 /* Images.xcassets in Resources */,
 			);
@@ -221,6 +268,7 @@
 			files = (
 				081C9FDB1AC8569500E3BB80 /* ViewController.m in Sources */,
 				081C9FD81AC8569500E3BB80 /* AppDelegate.m in Sources */,
+				083B41701AC9638B000B4BB0 /* CustomTableViewCell.m in Sources */,
 				081C9FD51AC8569500E3BB80 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +328,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -322,7 +370,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -414,6 +462,7 @@
 				081C9FF41AC8569500E3BB80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		081C9FF51AC8569500E3BB80 /* Build configuration list for PBXNativeTarget "weatherForecastTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +471,7 @@
 				081C9FF71AC8569500E3BB80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
