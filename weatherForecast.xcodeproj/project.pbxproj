@@ -17,6 +17,7 @@
 		081C9FFA1AC85AD600E3BB80 /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 081C9FF91AC85AD600E3BB80 /* sky.jpg */; };
 		083B416D1AC96271000B4BB0 /* TableViewCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083B416C1AC96271000B4BB0 /* TableViewCustomCell.xib */; };
 		083B41701AC9638B000B4BB0 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 083B416F1AC9638B000B4BB0 /* CustomTableViewCell.m */; };
+		083B417B1ACAB160000B4BB0 /* tokyo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 083B417A1ACAB160000B4BB0 /* tokyo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		083B416E1AC9638B000B4BB0 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		083B416F1AC9638B000B4BB0 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		083B41711AC96555000B4BB0 /* TableViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewConst.h; sourceTree = "<group>"; };
+		083B417A1ACAB160000B4BB0 /* tokyo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tokyo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		081C9FF81AC85AD600E3BB80 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				083B417A1ACAB160000B4BB0 /* tokyo.jpg */,
 				081C9FF91AC85AD600E3BB80 /* sky.jpg */,
 			);
 			path = img;
@@ -246,6 +249,7 @@
 			files = (
 				081C9FDE1AC8569500E3BB80 /* Main.storyboard in Resources */,
 				083B416D1AC96271000B4BB0 /* TableViewCustomCell.xib in Resources */,
+				083B417B1ACAB160000B4BB0 /* tokyo.jpg in Resources */,
 				081C9FFA1AC85AD600E3BB80 /* sky.jpg in Resources */,
 				081C9FE31AC8569500E3BB80 /* LaunchScreen.xib in Resources */,
 				081C9FE01AC8569500E3BB80 /* Images.xcassets in Resources */,
