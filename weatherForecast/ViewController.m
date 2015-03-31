@@ -18,7 +18,6 @@
 @end
 
 @implementation ViewController{
-    NSArray *weatherArray;
     NSMutableArray *dayArray;
     NSMutableArray *maxTemp;
     NSMutableArray *minTemp;
@@ -41,14 +40,13 @@
     self.timeLabel.text = [dateFormatter stringFromDate:nowDate];
     
     //天気予報情報を取得
-    NSURL *url = [NSURL URLWithString:@"http://openweathermap.org/data/2.5/forecast/daily?q=Tokyo&mode=json&units=metric&cnt=7"];
+    NSURL *url = [NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/forecast/daily?q=Tokyo&mode=json&units=metric&cnt=7"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSData *jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSError *error = nil;
     NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:&error];
-    weatherArray = [jsonObj valueForKeyPath:@"list"];
 
-    if (weatherArray != nil) {
+    if (jsonObj != nil) {
         
         //（週間予報用）曜日を取得
         dayArray = [[NSMutableArray alloc]init];
@@ -78,14 +76,16 @@
         
         //（週間予報用）天気アイコンを取得
         imageArray = [[NSMutableArray alloc]init];
+        NSArray *iconStrArray = [jsonObj valueForKeyPath:@"list.weather.icon"];
         for (int i=0; i<7; i++) {
-            NSString *iconNo = [jsonObj valueForKeyPath:@"list.weather.icon"];
+            NSString *iconNo = [iconStrArray[i] componentsJoinedByString:@","];
             NSString *iconStr = [NSString stringWithFormat:@"http://openweathermap.org/img/w/%@.png",iconNo];
             NSURL *iconUrl = [NSURL URLWithString:iconStr];
             NSData *iconData = [NSData dataWithContentsOfURL:iconUrl];
             UIImage *iconImage = [UIImage imageWithData:iconData];
             [imageArray addObject:iconImage];
         }
+        
     }else{
         NSLog(@"get json failed");
     }
@@ -102,10 +102,10 @@
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     //取得した情報を表示
-    cell.dayLabel.text = [NSString stringWithFormat:@"%@day",[dayArray objectAtIndex:indexPath.row]];
+    cell.dayLabel.text = [dayArray objectAtIndex:indexPath.row];
     cell.maxTempLabel.text = [NSString stringWithFormat:@"%@℃",[maxTemp objectAtIndex:indexPath.row]];
     cell.minTempLabel.text = [NSString stringWithFormat:@"%@℃",[minTemp objectAtIndex:indexPath.row]];
-    cell.imageView.image = [imageArray objectAtIndex:indexPath.row];
+    cell.weatherIcon.image = [imageArray objectAtIndex:indexPath.row];
     return cell;
 }
 
